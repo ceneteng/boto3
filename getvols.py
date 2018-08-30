@@ -6,5 +6,5 @@ import boto3
 for reg in regions:
 	ec2 = boto3.resource('ec2',region_name=reg)
 
-	for volume in ec2.Volume.all():
+	for volume in ec2.volumes.all():
 		print(volume.id)
