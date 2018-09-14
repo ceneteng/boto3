@@ -26,18 +26,18 @@ for instance in instances:
 
 images = list(ec2.image.filter(Filters=[{'Name': 'owner-id', 'Values': ['896917285996']}])
 for i in iIds:
-	ec2.image.wait_until_exists(
-		Filters = [{
+	# ec2.image.wait_until_exists(
+	# 	Filters = [{
 
-			'Name': 'name',
-			'Values': [
-				i, 
+	# 		'Name': 'name',
+	# 		'Values': [
+	# 			i, 
 
-			]
-		},
-	],
-		Owners=['896917285996'],
-	)
+	# 		]
+	# 	},
+	# ],
+	# 	Owners=['896917285996'],
+	# )
 	
 
 
