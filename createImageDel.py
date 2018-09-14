@@ -25,7 +25,7 @@ for instance in instances:
 		iIds.append(instance.instance_id)
 
 images = list(ec2.image.filter(Filters=[{'Name': 'owner-id', 'Values': ['896917285996']}])
-for id in iIds:
+for i in iIds:
 	ec2.image.wait_until_exists(
 		Filters = [{
 
