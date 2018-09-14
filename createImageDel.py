@@ -44,8 +44,8 @@ for ins in myIns:
 
 
 
-	# for instance in instances:
-		
-	#         if instance.vpc_id in vIds:
-	#                 instance.terminate()
-				
+for instance in instances:
+
+	if instance.vpc_id in vIds:
+			instance.terminate()
+			
