@@ -31,7 +31,7 @@ for i in iIds:
 
 			'Name': 'name',
 			'Values': [
-				id, 
+				i, 
 
 			]
 		},
