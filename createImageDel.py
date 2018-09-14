@@ -24,9 +24,11 @@ for instance in instances:
 		instance.create_image(Name = instance.instance_id)
 		myIns.append(instance.instance_id)
 
+print myIns
+
 #images = list(ec2.image.filter(Filters=[{'Name': 'owner-id', 'Values': ['896917285996']}]))
 
-waitImg = client.get_waiter('image_exists')
+waitImg = client.get_waiter('image_available')
 for ins in myIns:
 	waitImg.wait(
 		Filters = [{
