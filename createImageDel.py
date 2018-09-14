@@ -21,7 +21,7 @@ print vIds
 for instance in instances:
 	if instance.vpc_id in vIds:
 		print instance.tags
-        instance.create_image(Name = instance.instance_id)
+		instance.create_image(Name = instance.instance_id)
 		iIds.append(instance.instance_id)
 
 images = list(ec2.image.filter(Filters=[{'Name': 'owner-id', 'Values': ['896917285996']}])
