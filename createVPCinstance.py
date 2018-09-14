@@ -7,7 +7,7 @@ regions = 'us-east-1'
 #instances = ec2.instances.filter(
 #    Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
 
-bScript = open("hw")
+#bScript = open("hw")
 #myBash = bScript.read()
 
 
