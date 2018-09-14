@@ -24,27 +24,27 @@ for instance in instances:
 		instance.create_image(Name = instance.instance_id)
 		myIns.append(instance.instance_id)
 
-images = list(ec2.image.filter(Filters=[{'Name': 'owner-id', 'Values': ['896917285996']}])
+images = list(ec2.image.filter(Filters=[{'Name': 'owner-id', 'Values': ['896917285996']}]))
 
 
 for ins in myIns:
-	# ec2.image.wait_until_exists(
-	# 	Filters = [{
+	ec2.image.wait_until_exists(
+		Filters = [{
 
-	# 		'Name': 'name',
-	# 		'Values': [
-	# 			ins, 
+			'Name': 'name',
+			'Values': [
+				ins, 
 
-	# 		]
-	# 	},
-	# ],
-	# 	Owners=['896917285996'],
-	# )
-	
+			]
+		},
+	],
+		Owners=['896917285996'],
+	)
 
 
-# for instance in instances:
-        
-#         if instance.vpc_id in vIds:
-#                 instance.terminate()
-			
+
+	# for instance in instances:
+		
+	#         if instance.vpc_id in vIds:
+	#                 instance.terminate()
+				
